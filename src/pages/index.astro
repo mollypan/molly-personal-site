@@ -1,0 +1,376 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SmBox from "../components/SmBox.astro";
+import LgBox from "../components/LgBox.astro";
+import VLongBox from "../components/VLongBox.astro";
+import HLongBox from "../components/HLongBox.astro";
+
+const devIcons1 = ["js.svg","HTML.svg", "css.svg", 'tailwind.svg',];
+const devIcons2 = ["Vue.svg", "mini-program.svg", "electron.svg", 'astro.svg'];
+const designIcons = ["Figma.svg", "AI.svg", "ps-l.svg", 'blender.svg'];
+const inspirations = ['pinterest.svg', 'Behance.svg','dribble.svg','mobbin.svg']
+const songsList = [
+  {
+    name: "巫堵",
+    singer: "deca joins",
+    time: "03:30",
+    link: "https://music.163.com/song/media/outer/url?id=483378330.mp3",
+    imgUrl:
+      "http://p3.music.126.net/byjfkEIOWI_RmxSKEWTPyw==/18910500486297525.jpg?param=300x300&quot",
+    id: "song1",
+  },
+  {
+    name: "憂一乗",
+    singer: "ヨルシカ",
+    time: "04:32",
+    link: "https://music.163.com/song/media/outer/url?id=1387099644.mp3",
+    imgUrl: "http://p3.music.126.net/oH-hPC-coG6spFpbaA4xjw==/109951164327687331.jpg?param=300x300",
+    id: "song2",
+  },
+  {
+    name: "城市",
+    singer: "张悬",
+    time: "04:45",
+    link: "https://music.163.com/song/media/outer/url?id=326712.mp3",
+    imgUrl:
+      "http://p4.music.126.net/z4_mW9fJ98isT4kiCRIX5A==/3304032449027594.jpg",
+    id: "song3",
+  },
+  {
+    name: "wish you were here",
+    singer: "Pink Floyd",
+    time: "05:34",
+    link: "https://ra-sycdn.kuwo.cn/0fefba89552176cc02076c9e553aa8ce/660a255d/resource/n1/128/28/58/2593229035.mp3?from=vip",
+    imgUrl: "https://img4.kuwo.cn/star/albumcover/120/7/42/1179456328.jpg",
+    id: "song4",
+  },
+];
+---
+
+<Layout title="Molly's Blog">
+  <main
+    class="min-h-screen min-w-full flex flex-col items-center justify-center"
+  >
+    <div class="flex w-full max-w-[1728px] flex-col">
+      <div
+        class="relative flex min-h-screen w-full flex-1 flex-col items-center"
+      >
+        <div
+          class="flex h-full w-full max-w-[428px] items-center justify-center p-6 pt-12 pb-0 xl:absolute xl:top-0 xl:max-w-[min(100vw,1728px)] xl:items-stretch xl:justify-start xl:p-16"
+        >
+          <div class="flex w-full flex-col px-4 xl:mr-20 xl:flex-1 xl:px-0">
+            <!-- 个人介绍部分 -->
+            <div class="relative xl:sticky xl:top-16">
+              <!-- 头像 -->
+              <div class="w-[120px] xl:w-[184px]">
+                <img src="avatar.jpeg" alt="" class="rounded-full" />
+              </div>
+              <!-- 介绍 -->
+              <div
+                class="ml-2 mt-8 w-[calc(100%-8px)] max-w-[min(500px,100%-8px)] xl:max-w-[min(500px,calc(100vw_-_1000px))]"
+              >
+                <h1 class="text-[32px] xl:text-[44px] font-bold">Molly Pan</h1>
+                <div class="mt-3 text-[#565656] xl:text-xl">
+                  <p>加油小咩！</p>
+                  <div class="flex items-center mt-2">
+                    <img src="wechat.svg" alt="wechat" class="w-5 h-5">
+                    <span class="font-mono ml-3 text-sm">mollypan96_</span>
+                  </div>
+                  <div class="flex items-center mt-1">
+                    <img src="mail.svg" alt="wechat" class="w-5 h-5">
+                    <span class="font-mono ml-3 text-sm">mollypan96@163.com</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex h-full w-full max-w-[428px] flex-1 flex-col p-6 pt-0 xl:max-w-[1728px] xl:flex-row xl:p-16"
+        >
+          <div
+            class="mb-10 flex flex-col px-4 xl:mb-0 xl:mr-20 xl:flex-1 xl:px-0"
+          >
+          </div>
+          <!-- 右侧展示部分 -->
+          <div class="relative flex-1 xl:w-[820px] xl:flex-none">
+            <div
+              class="flex flex-wrap justify-between w-full h-full xl:grid xl:grid-cols-4 xl:grid-rows-5 xl:gap-10"
+            >
+              <!-- 季节图片 -->
+              <div class="hover:shadow-inner">
+                <SmBox>
+                  <img src="picnic.jpg" alt="spring view" />
+                </SmBox>
+
+                <!-- <div class="xl:mt-[40px] ml-6 xl:ml-0">
+                  <SmBox>
+                    <div class="relative">
+                      <img src="flower-bg.png" alt="flower-bg" class="w-full" />
+                      <p
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-6xl font-bold h-full text-center"
+                        style="-webkit-text-stroke: 1.5px #000; -webkit-text-fill-color: transparent; writing-mode: vertical-rl;"
+                      >
+                        はる
+                      </p>
+                    </div>
+                  </SmBox>
+                </div> -->
+              </div>
+              <!-- 季节文字 -->
+              <div class="col-start-1 col-end-2 row-start-2 row-end-3">
+                <SmBox>
+                  <div class="relative">
+                    <img src="flower-bg.png" alt="flower-bg" class="w-full" />
+                    <p
+                      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-6xl font-bold h-full text-center"
+                      style="-webkit-text-stroke: 1.5px #000; -webkit-text-fill-color: transparent; writing-mode: vertical-rl;"
+                    >
+                      はる
+                    </p>
+                  </div>
+                </SmBox>
+              </div>
+              <!-- 技能列表 -->
+              <div
+                class="col-start-2 col-end-4 row-start-1 row-end-3 mt-6 xl:mt-0"
+              >
+                <LgBox>
+                  <div class="flex flex-col items-stretch">
+                    <div class="flex flex-col mt-3">
+                      <p class="font-bold text-base tracking-wide font-mono">Dev</p>
+                      <div class="flex justify-between items-center mt-2">
+                        {
+                          devIcons1.map((icon) => (
+                            <img src={icon} alt={icon} class="w-10" />
+                          ))
+                        }
+                      </div>
+                      <div class="flex justify-between items-center mt-3">
+                        {
+                          devIcons2.map((icon) => (
+                            <img src={icon} alt={icon} class="w-10" />
+                          ))
+                        }
+                      </div>
+                    </div>
+                    <div class="flex flex-col mt-6">
+                      <p class="font-bold text-base tracking-wide font-mono">Design</p>
+                      <div class="flex justify-between items-center mt-3">
+                        {
+                          designIcons.map((icon) => (
+                            <img src={icon} alt={icon} class="w-10" />
+                          ))
+                        }
+                      </div>
+                    </div>
+                    <div class="flex flex-col mt-6">
+                      <p class="font-bold text-base tracking-wide font-mono">Inspirations</p>
+                      <div class="flex justify-between items-center mt-3">
+                        {
+                          inspirations.map((icon) => (
+                            <img src={icon} alt={icon} class="w-8" />
+                          ))
+                        }
+                      </div>
+                    </div>
+                  </div>
+                </LgBox>
+              </div>
+
+              <!-- 地图 -->
+              <a
+                class="col-start-1 col-end-2 row-start-3 row-end-4 mt-6 xl:mt-0"
+                href="https://www.google.com/maps/place/%E4%B8%AD%E5%9C%8B%E6%B9%96%E5%8C%97%E7%9C%81%E6%AD%A6%E6%BC%A2%E5%B8%82/data=!4m2!3m1!1s0x342eaef8dd85f26f:0x39c2c9ac6c582210?sa=X&ved=1t:242&ictx=111"
+                target="_blank"
+                class="col-start-1 col-end-2 row-start-3 row-end-4 cursor-pointer"
+              >
+                <SmBox isPic="true">
+                  <img src="map.jpg" alt="" />
+                </SmBox>
+              </a>
+              <!-- 可爱 -->
+              <div class="col-start-4 row-start-3 mt-6 xl:mt-0">
+                <SmBox>
+                  <img src="cute.jpg" alt="" class="h-full" />
+                </SmBox>
+              </div>
+              <!-- 句子图片 -->
+              <div
+                class="col-start-2 col-end-4 row-start-3 row-end-4 mt-6 xl:mt-0"
+              >
+                <HLongBox isPic="true">
+                  <div
+                    class="w-full h-full bg-[url('sentence.jpeg')] bg-center bg-cover"
+                  >
+                  </div>
+                </HLongBox>
+              </div>
+              <!-- 书籍 -->
+              <div
+                class="row-start-4 row-end-5 col-start-1 col-end-3 mt-6 xl:mt-0"
+              >
+                <HLongBox isPic="false">
+                  <div class="p-6 flex flex-col">
+                    <img src="book.svg" class="w-6" />
+                    <div class="flex items-center justify-between mt-3">
+                      <a
+                        href="https://weread.qq.com/web/bookDetail/8c43210071a615e78c472dc"
+                        target="_blank"
+                      >
+                        <img
+                          src="book1.jpg"
+                          alt=""
+                          class="w-[70px] h-[95px] rounded"
+                        />
+                      </a>
+                      <a
+                        href="https://weread.qq.com/web/bookDetail/bec32e207213d429bec5ec4"
+                        target="_blank"
+                      >
+                        <img
+                          src="book2.jpg"
+                          alt=""
+                          class="w-[70px] h-[95px] rounded"
+                        />
+                      </a>
+                      <a
+                        href="https://weread.qq.com/web/bookDetail/c5c32170813ab7177g0181ae"
+                        target="_blank"
+                      >
+                        <img
+                          src="book3.jpg"
+                          alt=""
+                          class="w-[70px] h-[95px] rounded"
+                        />
+                      </a>
+                      <a
+                        href="https://weread.qq.com/web/bookDetail/8c632230715c01a18c683d8"
+                        target="_blank"
+                      >
+                        <img
+                          src="book4.jpg"
+                          alt=""
+                          class="w-[70px] h-[95px] rounded"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </HLongBox>
+              </div>
+              <!-- 播客 -->
+              <div
+                class="col-start-1 col-end-3 row-start-5 row-end-6 mt-6 xl:mt-0"
+              >
+                <HLongBox>
+                  <div class="p-6 flex flex-col">
+                    <img src="airpods.svg" class="w-6" />
+                    <div class="flex items-center justify-between mt-3">
+                      <a
+                        href="https://www.xiaoyuzhoufm.com/podcast/613753ef23c82a9a1ccfdf35"
+                        target="_blank"
+                      >
+                        <img
+                          src="pod1.png"
+                          alt=""
+                          class="w-[86px] h-[86px] rounded"
+                        />
+                      </a>
+                      <a
+                        href="https://www.xiaoyuzhoufm.com/podcast/5e74b52c418a84a046ecaceb"
+                        target="_blank"
+                      >
+                        <img
+                          src="pod2.jpg"
+                          alt=""
+                          class="w-[86px] h-[86px] rounded"
+                        />
+                      </a>
+                      <a
+                        href="https://www.xiaoyuzhoufm.com/podcast/5e77133b418a84a0469fc305"
+                        target="_blank"
+                      >
+                        <img
+                          src="pod3.webp"
+                          alt=""
+                          class="w-[86px] h-[86px] rounded"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </HLongBox>
+              </div>
+              <!-- 音乐 -->
+              <div class="row-start-4 row-end-6 mt-6 xl:mt-0">
+                <LgBox bgColor={"#f7fffa"}>
+                  <div class="w-full h-full">
+                    <div>
+                      <img src="music.svg" alt="music-icon" class="w-8" />
+                      <p class="text-[#565656] text-sm mt-3 mb-8">
+                        Songs I like
+                      </p>
+                    </div>
+                    <div>
+                      {
+                        songsList.map((song) => (
+                          <audio id={song.id} src={song.link} />
+                        ))
+                      }
+                      <ul>
+                        {
+                          songsList.map((song,index) => (
+                            <li class="flex justify-between items-center mb-5 cursor-pointer" id=`music${index+1}`>
+                              <div class="flex justify-between items-center">
+                                <div class="relative">
+                                  <img
+                                    src={song.imgUrl}
+                                    class="w-10 h-10 rounded-md mr-3 cursor-pointer "
+                                  />
+                                    <div class="bg-[#1ed760] w-10 h-10 rounded-md absolute top-0 left-0 flex justify-center items-center opacity-0 hover:opacity-100">
+                                      <img src="play.svg" class="w-4 h=4" id=`play-svg${index+1}`/>
+                                    </div>
+                                </div>
+                                <div>
+                                  <p class="text-sm">{song.name}</p>
+                                  <p class="text-xs text-[#565656]">
+                                    {song.singer}
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="text-[#bbb] text-sm leading-10">
+                                {song.time}
+                              </div>
+                            </li>
+                          ))
+                        }
+                      </ul>
+                    </div>
+                  </div>
+                </LgBox>
+              </div>
+              <!-- 小狗 -->
+              <div
+                class="row-start-1 row-end-3 col-start-4 col-end-5 mt-6 xl:mt-0"
+              >
+                <VLongBox>
+                  <div
+                    class="w-full h-full relative"
+                    style="background-color: #fefcf2;"
+                  >
+                    <img src="dog.png" alt="dog" class="absolute top-[50px]" />
+                    <p class="absolute bottom-12 right-8 font-mono ">Welcome!</p>
+                  </div>
+                </VLongBox>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<script>
+import '../scripts/music'
+</script>
